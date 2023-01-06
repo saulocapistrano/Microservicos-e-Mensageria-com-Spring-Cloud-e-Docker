@@ -8,11 +8,11 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class MQConfig {
 
-        @Value("${mq.queues.emissao-catoes}")
-        private String emissaoCataosFila;
+    @Value("${mq.queues.emissao-catoes}")
+    private String emissaoCatoesFila;
 
-      @Bean
+        @Bean
         public Queue queueEmissaoCartoes(){
-                return new Queue(emissaoCataosFila,true);
+                return new Queue(emissaoCatoesFila,true);
             }
 }
